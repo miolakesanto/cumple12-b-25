@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitación Cumpleaños</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    #mensaje {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Invitación de Cumpleaños Agustín Leonardo 2025</h1>
+  <h4>Bienvenido a la Pagina de Invitación del Cumpleaños de Agustín Leonardo 2025.</h2>
+  <h4>Aquí Celebramos el Cumpleaños Numero 12 de Agustín Leonardo Incluido con divertidas Actividades y Juegos.</h2>
+  <h4>La Reunión se Hará por Google Meet, para una reunión Más Optimizada.</h2>
+  <h4>Ingrese su nombre real en minusculas y la Clave de Ingreso para continuar.</h2>
+  <h6>Una vez Ingresado el Nombre, la Clave de Ingreso, y Presionar Aceptar, Usted se Redirigirá directamente a la Reunion, sin Correo ni nada.</h3>
+  
+  <input type="text" id="usuario" placeholder="Nombre"><br>
+  <input type="text" id="clave" placeholder="Clave de ingreso"><br>
+  <button onclick="verificar()">Aceptar</button>
+
+  <div id="mensaje"></div>
+
+  <audio id="musica" src="loopsong.mp3" autoplay loop></audio>
+
+  <script>
+    const usuariosValidos = ["yeico97pro", "alfredo", "paulo"];
+    const claveValida = "AL52GM08B50";
+
+    function verificar() {
+      const usuario = document.getElementById("usuario").value.toLowerCase();
+      const clave = document.getElementById("clave").value;
+      const mensaje = document.getElementById("mensaje");
+
+      if (usuariosValidos.includes(usuario) && clave === claveValida) {
+        // Correcto: Redirigir a la Reunión
+        window.location.href = "https://google.com";
+      } else {
+        // Incorrecto: Mostrar mensaje de Error
+        mensaje.textContent = "Nombre o Clave de Ingreso incorrectos.";
+        mensaje.style.color = "red";
+      }
+    }
+  </script>
+  <h6>Reunión B</h6>
+</body>
+</html>
+
